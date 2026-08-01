@@ -1,10 +1,37 @@
+#include <stdlib.h> // For malloc
 #include <stddef.h> // For NULL
+#include <ctype.h>  // For toupper
+
+
 // TODO: Include any necessary header files here
 
 /**
- * TODO: Describe what the function does
+ *  Creates new string with lowercase letters converted
+ * to uppercase. Other characters remain unchanged.
  */
 char* capitalize(const char* s) {
-    return NULL;
+    if (s == NULL) {
+        return NULL;
+    }
+
+    int length = 0;
+
+    while (s[length] != '\0') {
+        length++;
+    }
+
+    char* result = malloc(sizeof(char) * (length + 1));
+
+    if (result == NULL) {
+        return NULL;
+    }
+
+    for (int i = 0; i < length; i++) {
+        result[i] = toupper((unsigned char)s[i]);
+    }
+
+    result[length] = '\0';
+
+    return result;
 }
 
