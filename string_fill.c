@@ -12,6 +12,7 @@ void string_fill(char dest[], int dest_cap, char c) {
     for (int i = 0; i < dest_cap - 1; i++) {
         dest[i] = c;
     }
+    
 
     dest[dest_cap - 1] = '\0';
 }

@@ -14,6 +14,7 @@ char* capitalize(const char* s) {
         return NULL;
     }
 
+    
     int length = 0;
 
     while (s[length] != '\0') {

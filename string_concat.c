@@ -16,6 +16,7 @@ void string_concat(char* src1, int src1_cap, const char* src2) {
         src1_len++;
     }
 
+    
     // If there is no null terminator within the capacity,
     // there is no valid string to concatenate onto.
     if (src1_len >= src1_cap) {
